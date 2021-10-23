@@ -19,4 +19,9 @@ class Ship extends Model
     {
         return $this->hasMany(User::class);
     }
+
+    public function route()
+    {
+        return $this->hasMany(Route::class);
+    }
 }

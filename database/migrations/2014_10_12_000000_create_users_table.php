@@ -26,8 +26,8 @@ class CreateUsersTable extends Migration
             $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamps();
 
-            $table->foreign('rank_id')->references('id')->on('user_ranks')->default(2);
-            $table->foreign('ship_id')->references('id')->on('ships')->default(1);
+            $table->foreign('rank_id')->references('id')->on('user_ranks')->default(2)->onDelete('cascade');
+            $table->foreign('ship_id')->references('id')->on('ships')->default(1)->onDelete('cascade');
         });
     }
 
