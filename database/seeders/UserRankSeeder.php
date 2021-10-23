@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\UserRank;
 
 class UserRankSeeder extends Seeder
 {
@@ -88,6 +89,6 @@ class UserRankSeeder extends Seeder
             ],
         ];
 
-        UserRank::create();
+        UserRank::insert($ranks);
     }
 }
