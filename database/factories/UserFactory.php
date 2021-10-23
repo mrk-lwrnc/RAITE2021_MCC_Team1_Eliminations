@@ -41,8 +41,42 @@ class UserFactory extends Factory
     public function unverified()
     {
         return $this->state(function (array $attributes) {
-            return [
+            return [ 
                 'email_verified_at' => null,
+            ];
+        });
+    }
+
+    public function isAdmin()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'email' => 'admin@admin.com',
+                'password' => bcrypt('Raite2021'),
+                'rank_id' => 1,
+                'ship_id' => 1,
+            ];
+        });
+    }
+
+    public function isUser()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'email' => 'user@user.com',
+                'password' => bcrypt('Raite2021'),
+                'rank_id' => 2,
+                'ship_id' => 1,
+            ];
+        });
+    }
+
+    public function areUsers()
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'rank_id' => 1,
+                'ship_id' => 1,
             ];
         });
     }
