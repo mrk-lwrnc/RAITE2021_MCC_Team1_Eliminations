@@ -21,7 +21,7 @@ class CreateRoutesTable extends Migration
             $table->float('destination_longtitude');
             $table->float('destination_latitude');
             $table->float('distance');
-            $table->string('eta');
+            $table->dateTime('eta', $precision = 0);
             $table->float('price');
             $table->integer('crews');
             $table->timestamps();

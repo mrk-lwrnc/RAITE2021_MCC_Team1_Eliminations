@@ -28,6 +28,21 @@
                         {{ __('Ships') }}
                     </x-jet-nav-link>
                 </div>
+
+                {{--
+                <!-- Navigation Links -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('crews.index') }}" :active="request()->routeIs('crews.index')">
+                        {{ __('Crews') }}
+                    </x-jet-nav-link>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('ships.index') }}" :active="request()->routeIs('ships.index')">
+                        {{ __('Ships') }}
+                    </x-jet-nav-link>
+                </div> --}}
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">

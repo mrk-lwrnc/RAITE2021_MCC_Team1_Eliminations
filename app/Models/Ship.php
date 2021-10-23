@@ -24,4 +24,9 @@ class Ship extends Model
     {
         return $this->hasMany(Route::class);
     }
+
+    public function oneCaptain()
+    {
+        return $this->users()->where('rank_id', 3)->count();
+    }
 }

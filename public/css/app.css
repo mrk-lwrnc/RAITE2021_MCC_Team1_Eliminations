@@ -1654,6 +1654,9 @@ select {
 .pt-8 {
 	padding-top: 2rem;
 }
+.pl-20 {
+	padding-left: 5rem;
+}
 .text-left {
 	text-align: left;
 }
