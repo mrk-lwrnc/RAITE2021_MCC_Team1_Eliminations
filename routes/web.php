@@ -2,6 +2,7 @@
 
 use App\Http\Livewire\Crews\CrewsIndex;
 use App\Http\Livewire\Crews\CrewsEdit;
+use App\Http\Livewire\Ships\ShipsIndex;
 use Illuminate\Support\Facades\Route;
 
 
@@ -28,3 +29,5 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 Route::get('/crews', CrewsIndex::class)->name('crews.index');
 Route::get('/crews/{id}/edit', CrewsEdit::class)->name('crews.edit');
+
+Route::get('/ships', ShipsIndex::class)->name('ships.index');
