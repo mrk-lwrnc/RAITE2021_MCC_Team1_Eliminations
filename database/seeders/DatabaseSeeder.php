@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Ship;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,11 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
         $this->call([
             UserRankSeeder::class,
             ShipSeeder::class,
             UserSeeder::class,
         ]);
+        Ship::factory(10)->create();
     }
 }

@@ -46,6 +46,10 @@ class CrewsEdit extends Component
     {
         $this->validate();
 
+        // $ship = Ship::where('id', $this->crew['ship']);
+
+        // if($ship)
+
         $crew = [
             'name' => $this->crew['name'],
             'email' => $this->crew['email'],

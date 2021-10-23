@@ -8,19 +8,13 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <a href="">Add Ship</a>
+                <a href="{{ route('ships.create') }}">Add Ship</a>
                 @forelse($ships as $ship)
-                    <div class="font-bold text-xl">Ship Name: {{ $ship->name }}</div>
-                    <div class="font-bold text-xl">Crews:</div>
-                    <div class="grid grid-cols-2 gap-5">
-                    @foreach($ship->users as $crew)
-                            <div class="">
-                            {{ $crew->name }}
-                            </div>
-                            <div class="">
-                            {{ $crew->rank->rank }}
-                            </div>       
-                    @endforeach
+                    <div class="flex flex-col">
+                        <div class="font-bold text-xl">Ship Name: {{ $ship->name }}</div>
+                        <div class="font-bold text-xl pl-20">Crews: {{ $ship->users_count }}</div>
+                        <a href="{{ route('ships.create') }}">View Ship</a>
+                        <br>
                     </div>
                 @empty
                     <div>

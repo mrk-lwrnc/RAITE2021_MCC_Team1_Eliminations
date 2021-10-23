@@ -11,7 +11,7 @@ class ShipsIndex extends Component
 
     public function mount()
     {
-        $this->ships = Ship::with(['users' => function($query) {
+        $this->ships = Ship::withCount(['users' => function($query) {
             $query->with('rank');
         }])
         ->where('id', '!=', 1)
