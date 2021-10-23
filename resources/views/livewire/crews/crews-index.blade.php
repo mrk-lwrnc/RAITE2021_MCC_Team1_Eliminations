@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 @foreach($crews as $crew)
                     <div>{{ $crew->name }} {{ $crew->email }} {{ $crew->rank->rank }} {{ $crew->ship->name }}
-                        <a href="" >Edit User</a> <a href="">Delete User</a>
+                        <a href="{{ route('crews.edit', [$crew->id]) }}" >Edit User</a> <a href="">Delete User</a>
                     </div>
                 @endforeach
             </div>
