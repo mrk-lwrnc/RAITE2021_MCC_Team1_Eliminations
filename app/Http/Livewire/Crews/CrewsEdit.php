@@ -46,9 +46,30 @@ class CrewsEdit extends Component
     {
         $this->validate();
 
-        // $ship = Ship::where('id', $this->crew['ship']);
+        $ship = Ship::where('id', $this->crew['ship'])->first();
 
-        // if($ship)
+        if($this->crew['rank'] == "3") {
+             if($ship->oneCaptain() == 1) {
+                session()->flash('fail', 'There is already a captain!');
+                return;
+            }
+        } elseif ($this->crew['rank'] == "4") {
+             if($ship->oneChiefMate() == 1) {
+                session()->flash('fail', 'There is already a chief mate!');
+                return;
+            }
+        } elseif ($this->crew['rank'] == "5") {
+             if($ship->oneSecondMate() == 1) {
+                session()->flash('fail', 'There is already a second mate!');
+                return;
+            }
+        } elseif ($this->crew['rank'] == "6") {
+             if($ship->oneThirdMate() == 1) {
+                session()->flash('fail', 'There is already a third mate!');
+                return;
+            }
+        }
+           
 
         $crew = [
             'name' => $this->crew['name'],
