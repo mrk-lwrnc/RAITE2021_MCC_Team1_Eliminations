@@ -65,4 +65,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo(UserRank::class);
     }
+
+    public function ship()
+    {
+        return $this->belongsTo(Ship::class);
+    }
 }

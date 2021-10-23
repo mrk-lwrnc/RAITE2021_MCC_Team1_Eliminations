@@ -75,7 +75,7 @@ class UserFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             return [
-                'rank_id' => 1,
+                'rank_id' => 2,
                 'ship_id' => 1,
             ];
         });
