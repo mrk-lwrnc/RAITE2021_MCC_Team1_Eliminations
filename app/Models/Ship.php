@@ -25,8 +25,23 @@ class Ship extends Model
         return $this->hasMany(Route::class);
     }
 
-    public function oneCaptain()
+      public function oneCaptain()
     {
         return $this->users()->where('rank_id', 3)->count();
+    }
+
+    public function oneChiefMate()
+    {
+        return $this->users()->where('rank_id', 4)->count();
+    }
+
+    public function oneSecondMate()
+    {
+        return $this->users()->where('rank_id', 5)->count();
+    }
+
+    public function oneThirdMate()
+    {
+        return $this->users()->where('rank_id', 6)->count();
     }
 }

@@ -13,7 +13,7 @@
                     <div class="flex flex-col">
                         <div class="font-bold text-xl">Ship Name: {{ $ship->name }}</div>
                         <div class="font-bold text-xl pl-20">Crews: {{ $ship->users_count }}</div>
-                        <a href="{{ route('ships.create') }}">View Ship</a>
+                        <a href="{{ route('ships.view', [$ship->id]) }}">View Ship</a>
                         <br>
                     </div>
                 @empty
